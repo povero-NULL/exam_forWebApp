@@ -1,0 +1,69 @@
+﻿@page
+@model exam.Pages.Questions.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Question</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Question.QuestionID" class="control-label"></label>
+                <input asp-for="Question.QuestionID" class="form-control" />
+                <span asp-validation-for="Question.QuestionID" class="text-danger"></span>
+            </div
+            <div class="form-group">
+                <label asp-for="Question.QuestionText" class="control-label"></label>
+                <input asp-for="Question.QuestionText" class="form-control" />
+                <span asp-validation-for="Question.QuestionText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question.Answer1" class="control-label"></label>
+                <input asp-for="Question.Answer1" class="form-control" />
+                <span asp-validation-for="Question.Answer1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question.Answer2" class="control-label"></label>
+                <input asp-for="Question.Answer2" class="form-control" />
+                <span asp-validation-for="Question.Answer2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question.Answer3" class="control-label"></label>
+                <input asp-for="Question.Answer3" class="form-control" />
+                <span asp-validation-for="Question.Answer3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question.Answer4" class="control-label"></label>
+                <input asp-for="Question.Answer4" class="form-control" />
+                <span asp-validation-for="Question.Answer4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question.CorrectAnswer" class="control-label"></label>
+                <input asp-for="Question.CorrectAnswer" class="form-control" />
+                <span asp-validation-for="Question.CorrectAnswer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question.EventID" class="control-label"></label>
+                <input asp-for="Question.EventID" class="form-control" />
+                <span asp-validation-for="Question.EventID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
